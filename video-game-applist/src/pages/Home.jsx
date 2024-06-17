@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import GenreList from "../components/GenreList";
+import globalApi from "../API/globalApi";
 
 function Home() {
+  const [allGamesList, setAllGamesList] = useState();
+  useEffect(() => {
+    getAllGamesList();
+  }, [])
+
+  const getAllGamesList = () => {
+    globalApi.getGameList.then((resp) => {
+      // console.log(resp.data.results)
+      setAllGamesList(resp.data.results)
+    })
+  }
   return (
     <div className="grid grid-cols-4 px-8">
       <div className="hidden md:block">

@@ -9,7 +9,7 @@ function GenreList() {
   }, []);
   const getGenreList = () => {
     globalApi.getGenreList.then((res) => {
-      console.log(res.data.results);
+      // console.log(res.data.results);
       setGenreList(res.data.results);
     });
   };
