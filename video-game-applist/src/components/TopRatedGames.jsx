@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function TopRatedGames({ gameList }) {
   useEffect(() => {
@@ -12,7 +13,10 @@ function TopRatedGames({ gameList }) {
           (item, index) =>
             index < 13 &&
             item.metacritic > 93 && (
-              <div className="bg-gray-500 rounded-lg group hover:scale-125 transition-all ease-out duration-300">
+              <Link
+                to={`/game/${item.id}`}
+                className="bg-gray-500 rounded-lg group hover:scale-125 transition-all ease-out duration-300"
+              >
                 <img
                   src={item.background_image}
                   alt="Game image"
@@ -21,7 +25,7 @@ function TopRatedGames({ gameList }) {
                 <h2 className="text-[15px] font-bold p-2 dark:text-white">
                   {item.name}
                 </h2>
-              </div>
+              </Link>
             )
         )}
       </div>

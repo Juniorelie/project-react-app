@@ -1,31 +1,27 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Home from "./pages/Home";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import GameInfoPage from "./pages/GameInfoPage";
+import AboutPage from "./pages/AboutPage";
+import WishListPage from "./pages/WishListPage";
+import ErrorPage from "./pages/ErrorPage";
 import Header from "./components/Header";
-import { ThemeContext } from "./context/ThemeContext";
+import Footer from "./components/Footer";
 
-function App() {
-  const [count, setCount] = useState(0);
-  const [theme, setTheme] = useState("light");
-  useEffect(() => {
-    setTheme(
-      localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
-    );
-  }, []);
-
+const App = () => {
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div
-        className={`${theme} 
-      ${theme == "dark" ? "bg-[#f4f3f3]" : null}`}
-      >
-        <Header />
-        <Home />
-      </div>
-    </ThemeContext.Provider>
+    <div className="h-full flex flex-col justify-between">
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/game/:id" element={<GameInfoPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/wishlist" element={<WishListPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;
