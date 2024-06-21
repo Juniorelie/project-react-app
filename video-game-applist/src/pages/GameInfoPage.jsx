@@ -140,7 +140,7 @@ const GameInfoPage = () => {
               placeholder="Leave a review"
               value={newReview}
               onChange={(e) => setNewReview(e.target.value)}
-              className="border p-2 w-full mb-2"
+              className="border p-2 w-full mb-2 bg-gray-700"
             />
             <button
               type="submit"
