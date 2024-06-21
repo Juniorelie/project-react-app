@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import GameInfoPage from "./pages/GameInfoPage";
 import AboutPage from "./pages/AboutPage";
-import WishListPage from "./pages/WishListPage";
+import WishlistPage from "./pages/WishlistPage";
 import ErrorPage from "./pages/ErrorPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/game/:id" element={<GameInfoPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/wishlist" element={<WishListPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />

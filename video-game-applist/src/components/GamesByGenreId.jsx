@@ -16,7 +16,7 @@ function GamesByGenreId({ gameList }) {
         {gameList.map((item) => (
           <div
             key={item.id}
-            className="relative bg-gray-500 pb-8 mb-4 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
+            className="relative bg-gray-500 pb-10 mb-4 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
           >
             <button
               onClick={() => addToWishlist(item)}
@@ -41,7 +41,8 @@ function GamesByGenreId({ gameList }) {
                     item.ratings[0].title.slice(1)}
                   "
                 </span>
-              </h2> <br />
+              </h2>{" "}
+              <br />
               <p className="px-1 font-semibold">
                 <span>Released in: {item.released}</span>
               </p>
