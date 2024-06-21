@@ -15,7 +15,7 @@ const HomePage = () => {
   const randomGame = getRandomGame();
 
   return (
-    <div className="px-32 py-8">
+    <div className="px-32 py-8 bg-gray-700">
       <Banner gameBanner={randomGame} />
       <TopRatedGames gameList={games} />
       <GamesByGenreId gameList={filteredGames} />

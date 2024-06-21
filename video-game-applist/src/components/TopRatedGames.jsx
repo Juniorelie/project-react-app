@@ -7,7 +7,7 @@ function TopRatedGames({ gameList }) {
   }, []);
   return (
     <div className="mt-5">
-      <h2 className="text-[30px] font-bold dark:text-black">Top Rated Games</h2>
+      <h2 className="text-[30px] font-bold text-white">Top Rated Games</h2>
       <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-3">
         {gameList.map(
           (item, index) =>

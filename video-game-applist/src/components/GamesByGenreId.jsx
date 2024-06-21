@@ -9,14 +9,14 @@ function GamesByGenreId({ gameList }) {
   }, []);
   return (
     <div>
-      <h2 className="font-bold text-[30px] mt-5">
+      <h2 className="font-bold text-[30px] text-white mt-5">
         Learn More about the games !
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
         {gameList.map((item) => (
           <div
             key={item.id}
-            className="relative bg-gray-500 pb-10 mb-4 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
+            className="relative bg-gray-800 text-white pb-10 mb-4 rounded-lg hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer"
           >
             <button
               onClick={() => addToWishlist(item)}

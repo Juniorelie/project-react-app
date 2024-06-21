@@ -7,16 +7,16 @@ const WishListPage = () => {
   // console.log(wishlist);
 
   return (
-    <div className="px-32 py-8">
+    <div className="px-32 py-8 bg-gray-700">
       <h1 className="py-5 text-3xl font-bold text-white">Your Wishlist</h1>
       <div className="grid grid-cols-3 gap-8">
         {wishlist.map((game) => (
           <div
             key={game.id}
-            className="w-full relative space-y-4 bg-cyan-100 pt-4 rounded-xl"
+            className="w-full relative space-y-4 bg-gray-800 pt-4 rounded-xl text-white"
           >
             <button
-              className="absolute top-4 right-4 border border-red-500 px-5 py-2.5 rounded-lg font-semibold hover:bg-red-700 hover:text-white transition-all ease-out duration-500"
+              className="absolute top-4 right-4 border border-red-500 px-5 py-2.5 rounded-lg font-semibold hover:bg-red-700 transition-all ease-out duration-500"
               onClick={() => deleteFromWishlist(game.id)}
             >
               Remove

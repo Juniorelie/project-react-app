@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { GameContext } from "../context/GameContext";
-import gamelogo from "../assets/2b_logo.png"; // Assuming the logo is in the assets folder
+import gamelogo from "../assets/2b_logo.png";
 
 const Header = () => {
   const { setSearchTerm, searchTerm, wishlist } = useContext(GameContext);

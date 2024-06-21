@@ -72,12 +72,17 @@ const GameInfoPage = () => {
   if (!game)
     return (
       <div className="w-full h-screen bg-red-50 flex items-center justify-center text-4xl font-semibold">
-        <img src={loadingScreen} width={1000} height={500} alt="loading screen" />
+        <img
+          src={loadingScreen}
+          width={1000}
+          height={500}
+          alt="loading screen"
+        />
       </div>
     );
 
   return (
-    <div>
+    <div className="bg-gray-700 text-white">
       <h1 className="px-32 text-5xl uppercase font-bold my-8">{game.name}</h1>
       <img
         className="w-full max-h-[85vh] object-cover rounded-lg"
@@ -92,13 +97,20 @@ const GameInfoPage = () => {
         />
       </div>
       <div className="px-32">
-        <h3 className="mt-2 text-[22px] font-bold pb-12">Released in: {game.released}</h3>
+        <h3 className="mt-2 text-[22px] font-bold pb-12">
+          Released in: {game.released}
+        </h3>
       </div>
       <div className="px-32">
-        <h3 className="mt-2 text-[22px] font-bold pb-12">Developped by: {game.developers[0].name}</h3>
+        <h3 className="mt-2 text-[22px] font-bold pb-12">
+          Developped by: {game.developers[0].name}
+        </h3>
       </div>
       <div className="px-32">
-        <h3 className="mt-2 text-[22px] font-bold pb-12">Available on: {game.platforms[0].platform.name} / {game.platforms[1].platform.name} / {game.platforms[2].platform.name}</h3>
+        <h3 className="mt-2 text-[22px] font-bold pb-12">
+          Available on: {game.platforms[0].platform.name} /{" "}
+          {game.platforms[1].platform.name} / {game.platforms[2].platform.name}
+        </h3>
       </div>
 
       <div className="px-32 pb-12">
