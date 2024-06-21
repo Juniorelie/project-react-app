@@ -1,4 +1,5 @@
 import React from "react";
+import team from "../assets/team.png";
 
 function AboutPage() {
   return (
@@ -14,6 +15,12 @@ function AboutPage() {
           the percentage of critics that recommend the game and its relative
           ranking across all games on Everything Gaming.
         </p>
+      </div>
+      <div className="my-4 text-center text-white">
+        <h2 className="text-[30px] mb-2 font-bold">
+          Meet our team of amazing gamers !
+        </h2>
+        <img src={team} alt="team image" className="w-[80%] my-0 mx-auto" />
       </div>
     </div>
   );
